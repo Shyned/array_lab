@@ -282,8 +282,26 @@ console.log(findVeggieDish)
 //Hint: You do not want to check the array's indexes to find out what the array INCLUDES.
 //Filter
 
+
 //10. Create a function that will return the total serving count of all dishes.
 //Must use Reduce, not a loop.
 
+function totalServings(object) {
+    let total = 0
+let servingArray =[]
+let totalServing = object.map(function (el) {
+    return servingArray.push(el.servings)
+})
+// test to see if serving were appened to array
+// return servingArray
+    let arraysum = servingArray.reduce(function (total,element){
+        return total + element
+    })
+    return arraysum
+}
+test = totalServings(dishes)
+console.log(test)
+
+// console.log('total is servings',test)
 //11. Create a function that will return an array of any objects that do not share a cuisine type with any other objects.
 
